@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      Test
+    </header>
+    <main>
+      <div class="field">
+        <p class="field-label">Download Path</p>
+        <div class="field-item">
+          <input
+            type="text"
+            placeholder="Specify download location"
+            id="download-path"
+          />
+          <span class="tips">
+            Dynamic generate path with selector and template string!<br />
+            eg. prefix-${$(".class").innerText}
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="field-label">Use Serial Number as File Name</p>
+        <div class="field-item">
+          <div>
+            <input
+              type="text"
+              placeholder="Specify file name prefix"
+              id="file-name-prefix"
+              disabled
+            />
+            <input type="checkbox" name="" id="use-serial" />
+          </div>
+          <span class="tips">
+            By tick the box, files will be stored with number, you can also
+            specify a prefix string<br />
+            ex: img-001
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="field-label">Download From Specific Element</p>
+        <div class="field-item">
+          <div>
+            <input
+              type="text"
+              placeholder="Specify the element where images are located"
+              id="target-dom"
+              value=".haha"
+            />
+            <button class="apply-button" id="apply-dom">
+              Apply
+            </button>
+          </div>
+          <span class="tips">
+            You don't have to select img tag.
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="field-label">Download From Specific Variable</p>
+        <div class="field-item">
+          <div>
+            <input
+              type="text"
+              placeholder="Specify download location"
+              id="target-variable"
+            />
+            <button class="apply-button" id="apply-variable">
+              Apply
+            </button>
+          </div>
+
+          <span class="tips">
+            If some dork store all the images inside a global variable
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <p class="field-label">
+          Select Images (<span id="selected-count">0</span>)
+        </p>
+        <div class="field-item">
+          <form id="download-form">
+            <div class="collection" id="collection"></div>
+            <button type="submit">Download</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="haha">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      /><img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      /><img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Eopsaltria_australis_-_Mogo_Campground.jpg"
+        alt=""
+      />
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+:root {
+  font-size: 16px;
+  font-family: "Noto Sans TC", sans-serif;
+  --theme-white: #fff;
+  --theme-gray: #aaa;
+  --theme-label: #666;
+  --theme-tips: #aaa;
+  --theme-main: #231651;
+  --theme-sub: #2374ab;
+  --theme-sub2: #ff4040;
+  --theme-bg: #fefefe;
+  --theme-padding: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--theme-bg);
+  min-width: 600px;
+}
+
+header {
+  background-color: var(--theme-main);
+  color: var(--theme-white);
+  padding: var(--theme-padding);
+  font-size: 1.25rem;
+}
+
+main {
+  padding: var(--theme-padding);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--theme-label);
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.field .field-label {
+  background-color: var(--theme-white);
+  color: var(--theme-label);
+  font-size: 0.6rem;
+  position: absolute;
+  padding: 0 0.25rem;
+  line-height: 0.8rem;
+  top: -0.3rem;
+  left: 0.25rem;
+  margin: 0;
+}
+
+.field-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem 0;
+}
+
+.field-item label {
+  font-size: 0.8rem;
+}
+
+.field-item input[type="text"] {
+  border-radius: 0;
+  border-width: 1px;
+  border-color: var(--theme-tips);
+  border-style: solid;
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
+  padding: 0.25rem;
+}
+
+@keyframes outlineAnim {
+  0% {
+    outline: 3px solid var(--theme-sub);
+  }
+  50% {
+    outline: 3px solid transparent;
+  }
+  100% {
+    outline: 3px solid var(--theme-sub);
+  }
+}
+
+.field-item input[type="text"]:focus {
+  animation: outlineAnim 2s linear 0s infinite forwards;
+}
+
+.field-item .tips {
+  font-size: 0.5rem;
+  line-height: 1rem;
+  color: var(--theme-tips);
+  margin-top: 0.25rem;
+}
+
+.collection {
+  max-height: 400px;
+  flex-wrap: wrap;
+  overflow: auto;
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.collection-wrapper {
+  line-height: 0;
+}
+
+.collection-wrapper label {
+  display: block;
+  line-height: 0;
+  position: relative;
+  opacity: 0.3;
+  transition: 0.3s ease-in-out;
+}
+
+.collection-checkbox {
+  display: none;
+}
+
+.collection-checkbox:checked ~ label {
+  opacity: 1;
+}
+
+.collection-checkbox:checked ~ label:after {
+  content: "✔";
+  color: var(--theme-white);
+  display: block;
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  top: 0.25rem;
+  left: 0.25rem;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: var(--theme-sub2);
+  border-radius: 50%;
+}
+
+.collection-wrapper img {
+  height: 6rem;
+}
