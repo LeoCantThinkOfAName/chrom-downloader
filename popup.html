@@ -22,7 +22,7 @@
           />
           <span class="tips">
             Dynamic generate path with selector and template string!<br />
-            eg. prefix-${$(".class").innerText}
+            eg. prefix-$(".class #id")}
           </span>
         </div>
       </div>
@@ -55,7 +55,7 @@
               type="text"
               placeholder="Specify the element where images are located"
               id="target-dom"
-              value=".haha"
+              value=""
             />
             <button class="apply-button" id="apply-dom">
               Apply
@@ -89,7 +89,10 @@
 
       <div class="field">
         <p class="field-label">
-          Select Images (<span id="selected-count">0</span>)
+          Select Images (<span id="selected-counts">0</span>/<span
+            id="collection-counts"
+            >0</span
+          >)
         </p>
         <div class="field-item">
           <form id="download-form">
